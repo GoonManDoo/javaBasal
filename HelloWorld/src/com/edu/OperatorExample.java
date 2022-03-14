@@ -22,7 +22,7 @@ public class OperatorExample {
     	boolean isAdult = myAge > 20;//참 아니면 거짓이 되는 값
     	System.out.println(isAdult);
     	
-    	// 논리연산자(
+    	// 논리연산자(크다 작다 하는거)
     	if(isAdult) {
     		System.out.println("성인입니다");
     	} else {
