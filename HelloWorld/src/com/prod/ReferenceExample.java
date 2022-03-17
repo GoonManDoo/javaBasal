@@ -1,8 +1,8 @@
 package com.prod;
 
 	
-	int age;//대문자로 시작하는건 class
-}
+	//int age;//대문자로 시작하는건 class
+//}
 
 
 public class ReferenceExample {
