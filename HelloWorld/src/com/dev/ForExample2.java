@@ -20,7 +20,7 @@ public static void main(String[] args) {
 //		if(i % 2 == 0)
 //		System.out.println(i);
 //		sum += i;
-	int sum = 0; //lastCnt = 1; 1번 반복
+	//int sum = 0; //lastCnt = 1; 1번 반복
 	int startCnt = 1;
 	int lastCnt = 20;
 	for(int i = startCnt; i <= lastCnt; i ++) {

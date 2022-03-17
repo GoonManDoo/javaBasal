@@ -28,11 +28,11 @@ public class IfExample { // WhichExmaple 대소문자 구분
     		System.out.println("B 입니다.");
     	      
     	      
-    	}	else if (score >= 70) {
+    //	}	else if (score >= 70) {
     		System.out.println("C 입니다.");
-    	}   else if (score >= 60) {
+    	//}   else if (score >= 60) {
     		System.out.println("D 입니다.");
-    	}	else {
+    	//}	else {
     	    System.out.println("F 입니다.");
     		}
     	System.out.println("end of program");
