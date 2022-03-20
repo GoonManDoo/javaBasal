@@ -35,9 +35,9 @@ public int getMoney() {
 public void setMoney(int money) {
 	Money = money;
 }
-@Override
-public String toString() {
-	return "Account [accNo=" + accNo + ", accName=" + accName + ", Money=" + Money + "]";
-}
+//@Override
+//public String toString() {
+//	return "Account [accNo=" + accNo + ", accName=" + accName + ", Money=" + Money + "]";
+//}
    
 }
