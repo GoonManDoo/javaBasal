@@ -24,7 +24,11 @@ public class Variables {
     	
     	String number = "010-1234-1234";
     	String email = "abc@eamil.com";
+<<<<<<< HEAD
+    	//System.out.println(myName + "의 전화번호는" + number + "이고" " + "email" + " 입니다");
+=======
     	System.out.println(myName + "의 전화번호는" + number + "이고"  + "email" + " 입니다");
+>>>>>>> branch 'master' of https://github.com/GoonManDoo/GoonManDoo.git
     	System.out.println("이창호의 전화번호:" + number + "이고" + "이메일은" + "email" + "입니다");
     	
         
