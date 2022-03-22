@@ -8,11 +8,9 @@ public class ArrayExample3 {
 	names[2] = "김영민";
 	names[3] = "황진주";
 	
-	names[1] = "군만두";
-    names[4] = "민영김";
-	names[1] = null;
+	
     
-    String searchName = "김영민";
+    String searchName = "홍길동";
 	
 	for(int i=0; i < 5; i++) {
 //    	if(names[i] !=null) {
@@ -20,7 +18,7 @@ public class ArrayExample3 {
 //		
 //	}
     if (names[i] !=null && names[i].equals(searchName)) {
-	    System.out.println(i + 1 + "번째 위치에 있습니다."); //1부터 시작해야 돼서 1넣기
+	    System.out.println(i + "번째 위치에 있습니다."); //1부터 시작해야 돼서 1넣기
 	}
    }
 }

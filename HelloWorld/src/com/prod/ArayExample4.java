@@ -6,7 +6,7 @@ public class ArayExample4 {
 		int sum = 0;
 		int cnt = 0;
 		for(int i = 0; i < numbers.length;i++) { //
-		   if (numbers[i] % 2 == 0) {
+		   if (numbers[i] % 2 == 1) {
 			   sum += numbers[i];
 			   cnt++;
 		   }

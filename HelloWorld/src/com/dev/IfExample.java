@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package com.dev;
 
 public class IfExample { // WhichExmaple 대소문자 구분
@@ -7,14 +7,6 @@ public class IfExample { // WhichExmaple 대소문자 구분
     	// 60점 이상이면 Pass
     	int score = 84;
     	
-    	
-    	if(score > 60) {
-    	System.out.println(" Pass입니다.");
-    	
-    	} else {
-    		System.out.println(" Fail입니다.");
-    		
-    		}
     	//90점이상 A, 80점이상 B, 70점이상 C, 60이상 D, 그 외 F
     	if(score > 90) {
     		if(score >= 95) {
@@ -37,10 +29,10 @@ public class IfExample { // WhichExmaple 대소문자 구분
     	    System.out.println("F 입니다.");
     		}
     	System.out.println("end of program");
-    	}
+    }
     }
 
-=======
+
 //package com.dev;
 //
 //public class IfExample { // WhichExmaple 대소문자 구분
@@ -82,7 +74,7 @@ public class IfExample { // WhichExmaple 대소문자 구분
 //    	}
     
     
->>>>>>> branch 'master' of https://github.com/GoonManDoo/GoonManDoo.git
+
 
 
             

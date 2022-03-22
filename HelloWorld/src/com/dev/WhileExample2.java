@@ -17,7 +17,7 @@ public class WhileExample2 {
     
     int i = 1; //초기화
     while(i <= 10) {
-    if(i % 2 == 1) {
+    if(i % 2 == 0) {
       System.out.println("i의 값=> " + i);
     		}
     i++; // 증감식 홀수

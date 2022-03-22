@@ -2,27 +2,17 @@ package com.prod;
 
 public class ArayExample {
 	public static void main(String[] args) {
-		long l1 = 123456543341234L; //L은 long를 나타냄, 붙여야됨, /byte
-		int i1 = 100; //담을 수 있는 메모리 크기 4byte
-		byte b1 = 127;//담을 수 있는 메모리 크기 1byte, max는 128, -128~-1/0~127
-		b1++;
-		b1++;
+//		long l1 = 123456543341234L; //L은 long를 나타냄, 붙여야됨, /byte
+//		int i1 = 100; //담을 수 있는 메모리 크기 4byte
+//		byte b1 = 127;//담을 수 있는 메모리 크기 1byte, max는 128, -128~-1/0~127
+//		b1++;
+//		b1++;
 		
-	short s1 = 100; // -32768 ~ -1 / 0~32767
-		System.out.println(Long.MAX_VALUE); 
+	int s1 = 100; // -32768 ~ -1 / 0~32767
+		System.out.println(); 
 		
 		int sum = 0;
-//		int score1 = 80;
-//		int score2 = 90;
-//		int score3 = 85;
-//		int score4 = 95;
-//		int score5 = 88;
-		
-//		sum += score1;
-//		sum += score2;
-//		sum += score3;
-//		sum += score4;
-//		sum += score5;
+
 		
 		double avg = sum / (double) 5; //double avg 평균
 		
@@ -34,13 +24,7 @@ public class ArayExample {
 		scores[3] = 95;
 		scores[4] = 88;
 		
-//		System.out.println(scores[0]);
-//		System.out.println(scores[1]);
-//		System.out.println(scores[2]);
-//		System.out.println(scores[3]);
-//		System.out.println(scores[4]);
-		
-//		System.out.println(scores[0] + scores[1]);
+
 		
 		//배열을 활용해서 sum > avg
 		sum = 0;
