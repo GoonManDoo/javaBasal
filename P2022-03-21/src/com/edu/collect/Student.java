@@ -43,7 +43,10 @@ public class Student {
 	      EngScore = engScore;
 	      KorScore = korScore;
 	   }
-	   @Override
+	   public Student(int stuNo, Object studentName2, Object object, Object object2) {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
 	   public String toString() {
 	      return "학생정보: 학생번호 : "  + StudentNumber + ", 이름: " +  StudentName  + ", 영어점수: " +  EngScore + 
 	      ", 국어점수: " + KorScore;
