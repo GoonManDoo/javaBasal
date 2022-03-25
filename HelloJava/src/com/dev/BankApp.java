@@ -194,7 +194,8 @@ public class BankApp {
        } else if (receiveAccnt == null ) {
     	   System.out.println("");
        }
-    	//    	=============================================================
+    	int checkCnt = 0;
+		//    	=============================================================
 //    	System.out.println("출금기능");
 //    	System.out.println("출금하실 계좌를 입력하세요");
 //    	String amt = scn.next();
