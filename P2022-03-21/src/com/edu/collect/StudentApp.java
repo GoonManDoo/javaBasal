@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class StudentApp {
-
+    //필드 ↓
 	List<Student> list = new ArrayList<Student>();
 	Scanner scn = new Scanner(System.in);
 
@@ -86,8 +86,11 @@ public class StudentApp {
 
 	} // end of StudentServiceImpl
 
+	// 메인기능을 담당하는 execute()
 	public void execute() {
-		StudentService service = new StudentServiceFile(); // StudentService는 인터페이스 StudentServiceImpl는 구현객체이다.
+		StudentService //service = new StudentServiceImpl();// StudentService는 인터페이스 StudentServiceImpl는 구현객체이다.
+		               service = new StudentServiceFile(); 
+		
 		// 메뉴: 1.추가 2.리스트 3.한건조회 4.수정 5.한건삭제 6.이름조회(이름) 9.종료
 		while (true) {
 			System.out.println("1.추가 2.리스트 3.한건조회 4.수정 5.한건삭제 6.이름조회 9.종료");
