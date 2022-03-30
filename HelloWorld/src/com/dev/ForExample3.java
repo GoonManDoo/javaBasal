@@ -27,7 +27,7 @@ public class ForExample3 {
 			    int num3 = 10;
 			}
 			
-		
+			
 
 	}
 }

@@ -1,4 +1,4 @@
-package com.prod.emp;
+package com.edu.JackDaniels;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
