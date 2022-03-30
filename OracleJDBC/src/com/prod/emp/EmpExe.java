@@ -48,6 +48,8 @@ public class EmpExe {
                 Employee emp = new Employee(employeeId, lastName, eMail, hireDate, jobId);
                 dao.insertEmp(emp);
 				
+			    
+			
 			} else if (menu == 3) { // 수정
 				 Employee emp = new Employee();
 
@@ -62,12 +64,10 @@ public class EmpExe {
 				emp.setphoneNumber(scn.next());
 				
 				System.out.println("급여를 입력해라");
-				int Salary = scn.nextInt();
-				emp.setSalary(scn.nextInt());
+				emp.setSalary(scn.nextInt()); //==	int Salary = scn.nextInt(); + emp.getSalary());
 				
 				System.out.println("사원번호를 입력해라");
-				int EmployeeId = scn.nextInt();
-				emp.setEmployeeId(scn.nextInt());
+				emp.setEmployeeId(scn.nextInt()); // == int EmployeeId = scn.nextInt();
 	                
 				dao.updateEmp(emp);
 				
