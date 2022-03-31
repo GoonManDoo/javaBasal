@@ -99,7 +99,7 @@ public class EmpDAO extends DAO {
       }
 
    }
-  //리턴되는 타입은 Employee
+  //이름으로 찾기 리턴되는 타입은 Employee
    public Employee searchEmp(int eid) {
 		      conn = getConnect();
 		      Employee emp = null;
