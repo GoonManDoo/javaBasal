@@ -8,31 +8,14 @@ public class SamsungLions {
 	// 생성자 : 기본생성자, 매개값이 4개 생성자.
 
 	// Getter, Setter 생성
-	int Bno = 300;
-	String Btitle = "김상수";
-	String Content = "왕좌에오른푸른사자";
-	String Writer = "왕좌에복귀한푸른사자";
-	String Date = "2022-10-12";
+	private int Bno = 300;
+	private String Btitle;
+	private String Content;
+	private String Writer;
+	private String Date;
 
 	public SamsungLions() {
 		
-	}
-	
-	
-	
-	public SamsungLions(int bno, String btitle, String content, String writer, String date) {
-		super();
-		Bno = bno;
-		Btitle = btitle;
-		Content = content;
-		Writer = writer;
-		Date = date;
-	}
-
-
-
-	public SamsungLions(int stuNo, Object studentName2, Object object, Object object2) {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getBno() {
@@ -75,13 +58,27 @@ public class SamsungLions {
 		Date = date;
 	}
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+	public SamsungLions(int bno, String btitle, String content, String writer, String date) {
+		super();
+		Bno = bno;
+		Btitle = btitle;
+		Content = content;
+		Writer = writer;
+		Date = date;
 	}
 
+	@Override
+	public String toString() {
+		return "SamsungLions [Bno=" + Bno + ", Btitle=" + Btitle + ", Content=" + Content + ", Writer=" + Writer
+				+ ", Date=" + Date + "]";
+	}
 	
+	
+	
+	
+
+
+
 	
 	
 	
