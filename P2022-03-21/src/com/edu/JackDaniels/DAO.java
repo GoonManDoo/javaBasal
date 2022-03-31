@@ -1,4 +1,4 @@
-package com.prod.emp;
+package com.edu.JackDaniels;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -44,4 +44,9 @@ public class DAO {
         e.printStackTrace();
      }
   }
+
+public void insertStudent(SamsungLions student) {
+	// TODO Auto-generated method stub
+	
+}
 }

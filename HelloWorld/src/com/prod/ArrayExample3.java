@@ -18,7 +18,7 @@ public class ArrayExample3 {
 //		
 //	}
     if (names[i] !=null && names[i].equals(searchName)) {
-	    System.out.println(i + "번째 위치에 있습니다."); //1부터 시작해야 돼서 1넣기
+	    System.out.println((i+1) + "번째 위치에 있습니다."); //1부터 시작해야 돼서 1넣기
 	}
    }
 }
