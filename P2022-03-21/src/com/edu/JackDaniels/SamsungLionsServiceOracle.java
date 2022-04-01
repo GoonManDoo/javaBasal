@@ -1,8 +1,11 @@
 package com.edu.JackDaniels;
 
+import java.awt.datatransfer.Clipboard;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.swing.border.Border;
 
 
 
@@ -15,12 +18,13 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 		String sql = "insert into board (b_no, b_title, b_content, b_writer, b_date)\r\n"
 				+ " values(?, ?, ?, ?, ?)"; 
 		try {
+			System.out.println(samsung.getDate());
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, samsung.getBno());
 			psmt.setString(2, samsung.getBtitle());
 			psmt.setString(3, samsung.getContent());
 			psmt.setString(4, samsung.getWriter());
-			psmt.setString(4, samsung.getDate());
+			psmt.setString(5, samsung.getDate());
 			
 			int r = psmt.executeUpdate();
 			System.out.println(r + "건 입력됨. ");
@@ -34,8 +38,26 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 
 	@Override
 	public SamsungLions getSamsung(int sno) {
-		// TODO Auto-generated method stub
-		return null;
+		conn = getConnect();
+		SamsungLions bod = null;
+		try {
+			psmt = conn.prepareStatement("select*from board where b_no = ?");
+		    psmt.setInt(1, sno);
+		    rs = psmt.executeQuery();
+		    if(rs.next())	{
+		    	bod = new SamsungLions();
+		    	bod.setBno(rs.getInt("b_no"));
+		    	bod.setBtitle(rs.getString("b_title"));
+		    	bod.setContent(rs.getString("b_content"));
+		    	bod.setWriter(rs.getString("b_writer"));
+		    	bod.setDate(rs.getString("b_date"));
+		    }
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+		return bod;
 	}
 
 	@Override
@@ -47,14 +69,14 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 			psmt = conn.prepareStatement(sql);
 		    rs = psmt.executeQuery(); //실행건수만큼 반복하겠다.
 		    while(rs.next()) { // 반복자를 통해 요소를 가지고 올 수 있는지 체크. 있으면 하나 가지고 올께.
-		    	SamsungLions student = new SamsungLions();
-		    	student.setBno(rs.getInt("b_no")); 
-		    	student.setBtitle(rs.getString("b_title"));
-		    	student.setContent(rs.getString("b_content"));
-		    	student.setWriter(rs.getString("b_writer"));
-		    	student.setDate(rs.getString("b_date"));
-		    	
-		    	list.add(student);
+		    	SamsungLions samsung = new SamsungLions();
+		    	samsung.setBno(rs.getInt("b_no")); 
+		    	samsung.setBtitle(rs.getString("b_title"));
+		    	samsung.setContent(rs.getString("b_content"));
+		    	samsung.setWriter(rs.getString("b_writer"));
+		    	samsung.setDate(rs.getString("b_date"));
+	    	
+		    	list.add(samsung);
 		    }
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -69,7 +91,7 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 	@Override
 	public void modifySamsung(SamsungLions samsung) {
 		conn = getConnect();
-		String sql = "update board set b_title = ?, b_content = ?, b_writer, b_date " + "where b_no = ?";
+		String sql = "update board set b_title = ?, b_content = ?, b_writer = ?, b_date = ?" + " where b_no = ?";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, samsung.getBtitle());
@@ -121,8 +143,8 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 	        	 samsung = new SamsungLions();
 	        	 samsung.setBno(rs.getInt("b_no")); // 
 	        	 samsung.setBtitle(rs.getString("b_title"));
-	        	 samsung.setContent(rs.getString("content"));
-	        	 samsung.setWriter(rs.getString("writer"));
+	        	 samsung.setContent(rs.getString("b_content"));
+	        	 samsung.setWriter(rs.getString("b_writer"));
 	        	 samsung.setDate(rs.getString("b_date"));
 	            list.add(samsung);
 	         }
