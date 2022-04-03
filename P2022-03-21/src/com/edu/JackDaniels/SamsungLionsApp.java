@@ -1,9 +1,8 @@
 package com.edu.JackDaniels;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -108,9 +107,10 @@ public class SamsungLionsApp {
 		// 메뉴1 : 게시글 번호, 제목, 내용, 작성자, 작성일시
 		while (true) {
 			System.out.println("삼성라이온즈 게시판에 오신걸 환영합니다.");
-			System.out.println("1.게시글 추가 2.게시글 목록 3.게시글 조회 4.게시글 수정 5.게시글 삭제 6.작성자 조회 9.종료");
+			System.out.println("[1.게시글 작성] [2.게시글 목록] [3.게시글 조회] [4.게시글 수정] [5.게시글 삭제] [6.작성자 조회] [9.종료]");
 			System.out.println("선택>> ");
-
+			Date now = new Date();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			int menu = scn.nextInt();
 			if (menu == 1) {
 				// 메뉴1 : 게시글 번호, 제목, 내용, 작성자, 작성일시
@@ -122,9 +122,7 @@ public class SamsungLionsApp {
 				String bContent = scn.next();
 				System.out.println("게시글 작성자를 입력하세요: ");
 				String bWriter = scn.next();
-				System.out.println("게시글 작성 시간을 입력하세요: ");
-				String bDate = scn.next();
-
+				String bDate = sdf.format(now);
 				SamsungLions s1 = new SamsungLions(bNo, bTitle, bContent, bWriter, bDate);
 				service.insertSamsung(s1);
 

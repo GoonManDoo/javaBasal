@@ -8,7 +8,10 @@ public class SamsungLions {
 	// 생성자 : 기본생성자, 매개값이 4개 생성자.
 
 	// Getter, Setter 생성
-	private int Bno = 300;
+
+	
+
+	private int Bno;
 	private String Btitle;
 	private String Content;
 	private String Writer;
@@ -69,9 +72,17 @@ public class SamsungLions {
 
 	@Override
 	public String toString() {
-		return "SamsungLions [Bno=" + Bno + ", Btitle=" + Btitle + ", Content=" + Content + ", Writer=" + Writer
-				+ ", Date=" + Date + "]";
+
+		return "SamsungLions [게시글번호=" + Bno + "], [제목=" + Btitle + "], [내용=" + Content + "], [작성자=" + Writer
+				+ "], [작성일=" + Date + "]";
 	}
+
+	
+	
+	
+	
+	
+
 	
 	
 	
