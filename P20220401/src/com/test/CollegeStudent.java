@@ -34,7 +34,7 @@ public class CollegeStudent extends Student {
 
 	@Override
 	public String toString() {
-		return "[학생번호= " + super.getStudNo() + ", [학생이름= " + super.getStudName() +"], 대학생 정보 [담당교수=" + profName + "], [전공=" + major + "]";
+		return "[학생번호= " + super.getStudNo() + "], [학생이름= " + super.getStudName() +"], 대학생 정보 [담당교수=" + profName + "], [전공=" + major + "]";
 	}
 	
 	

@@ -74,7 +74,7 @@ public class StudentApp {
 					System.out.println("반 이름 입력");
 					String s5 = scn.next();
 
-					HighStudent hm = new HighStudent(s2, s3, s4, s5);
+					Student hm = new HighStudent(s2, s3, s4, s5);
 					service.addStudent(hm);
 
 				} else if (s1.equals("대학생")) {
@@ -91,7 +91,7 @@ public class StudentApp {
 					System.out.println("전공 입력");
 					String s5 = scn.next();
 
-					CollegeStudent cm = new CollegeStudent(s2, s3, s4, s5);
+					Student cm = new CollegeStudent(s2, s3, s4, s5);
 					service.addStudent(cm);
 				}
 
