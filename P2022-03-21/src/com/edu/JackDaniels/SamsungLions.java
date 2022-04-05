@@ -3,9 +3,7 @@ package com.edu.JackDaniels;
 import javax.swing.Spring;
 
 public class SamsungLions {
-	// 학생번호(1,2,3), 이름(홍길동), 영어(80), 국어(70).
-
-	// 생성자 : 기본생성자, 매개값이 4개 생성자.
+	
 
 	// Getter, Setter 생성
 	private int Bno;
@@ -13,6 +11,8 @@ public class SamsungLions {
 	private String Content;
 	private String Writer;
 	private String Date;
+	
+	
 
 	public SamsungLions() {
 		
@@ -69,8 +69,8 @@ public class SamsungLions {
 
 	@Override
 	public String toString() {
-		return "SamsungLions App [게시글 번호=" + Bno + ", 제목=" + Btitle + ", 내용=" + Content + ", 작성자=" + Writer
-				+ ", 작성시간=" + Date + "]";
+		return "SamsungLions App [게시글 번호=" + Bno + "], [제목=" + Btitle + "], [내용=" + Content + "], [작성자=" + Writer
+				+ "], [작성시간=" + Date + "]";
 	}
 	
 	

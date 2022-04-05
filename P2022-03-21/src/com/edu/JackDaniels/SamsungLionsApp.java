@@ -132,7 +132,11 @@ public class SamsungLionsApp {
 					System.out.println(s.toString());
 				}
 
-			} else if (menu == 3) { // 한건 조회.
+				
+				
+			}else if (menu == 3) { // 한건 조회.
+					
+					
 				System.out.println("조회할 게시판 번호를 입력하세요: ");
 				int bNo = scn.nextInt();
 				SamsungLions samsung = service.getSamsung(bNo);
@@ -140,8 +144,11 @@ public class SamsungLionsApp {
 					System.out.println("조회된 결과가 없습니다.");
 				} else {
 					System.out.println(samsung.toString());
-				}
-
+					
+				
+				   
+			   }
+			
 			} else if (menu == 4) {
 				System.out.println("수정할 게시판 번호를 입력하세요: ");
 				int bNo = scn.nextInt();
