@@ -34,8 +34,13 @@ public class HighStudent extends Student {
 
 	@Override
 	public String toString() {
-		return "[학생번호= " + super.getStudNo() + "], [학생이름= " + super.getStudName() +"], 정보 [담임선생님=" + teacherName + "], [반이름=" + groupName + "]";
+		String info = super.toString();
+		info += "정보 [담임선생님=" + teacherName + "], [반이름=" + groupName + "]";
+	 return info;
 	}
+	
+
+
 	
 	
 
