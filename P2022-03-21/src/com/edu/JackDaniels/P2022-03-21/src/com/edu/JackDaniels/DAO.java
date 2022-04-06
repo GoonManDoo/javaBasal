@@ -49,9 +49,4 @@ public void insertStudent(SamsungLions student) {
 	// TODO Auto-generated method stub
 	
 }
-
-public void loginSamsung(String samsung) {
-	// TODO Auto-generated method stub
-	
-}
 }

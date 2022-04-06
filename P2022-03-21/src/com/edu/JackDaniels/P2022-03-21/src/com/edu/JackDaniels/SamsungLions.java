@@ -6,35 +6,17 @@ public class SamsungLions {
 	
 
 	// Getter, Setter 생성
-
-	
-
 	private int Bno;
 	private String Btitle;
 	private String Content;
 	private String Writer;
 	private String Date;
-	private int writeNum;
 	
 	
 
 	public SamsungLions() {
 		
 	}
-
-	
-	
-	public int getWriteNum() {
-		return writeNum;
-	}
-
-
-
-	public void setWriteNum(int writeNum) {
-		this.writeNum = writeNum;
-	}
-
-
 
 	public int getBno() {
 		return Bno;
@@ -83,33 +65,18 @@ public class SamsungLions {
 		Content = content;
 		Writer = writer;
 		Date = date;
-		
 	}
 
 	@Override
 	public String toString() {
-
 		return "SamsungLions App [게시글 번호=" + Bno + "], [제목=" + Btitle + "], [내용=" + Content + "], [작성자=" + Writer
 				+ "], [작성시간=" + Date + "]";
-
-
-		
-
 	}
-
 	
 	
 	
 	
 	
-
-	
-	
-	
-	
-
-
-
 	
 	
 	

@@ -79,25 +79,16 @@ public class SamsungLionsApp {
 			return searchList;
 		}
 
-		
+		@Override
+		public void saveToFile() {
+			// TODO Auto-generated method stub
+
+		}
 
 		@Override
 		public void modifySamsung(SamsungLions samsung) {
 			// TODO Auto-generated method stub
 
-		}
-
-		@Override
-		public int writeNum() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public int loginSamsung(String id, String pw) {
-			return 0;
-			// TODO Auto-generated method stub
-			
 		}
 
 	} // end of StudentServiceImpl
@@ -114,24 +105,9 @@ public class SamsungLionsApp {
 		// 메뉴: 1.게시글번호 2.제목 3.내용 4.작성자 5.작성일시 6.수정 7.한건삭제 8.이름조회 9.종료
 		// 메뉴: 1.게시글작성 2.리스트 3.한건조회 4.수정 5.한건삭제 6.이름조회 9.종료
 		// 메뉴1 : 게시글 번호, 제목, 내용, 작성자, 작성일시
-		
-		
 		while (true) {
-			System.out.println("아이디를 입력해주세요");
-			String id = scn.next();
-			System.out.println("비밀번호를 입력해주세요");
-			String pw = scn.next();
-			int result = service.loginSamsung(id, pw);
-			if (result == 1) {
-				System.out.println("로그인이 완료되었습니다.");
-			} else if (result == 0) {
-				System.out.println("다시 입력하세요.");
-				continue;
-			}
-			
-			
-			System.out.println("SamsungLions 게시판에 오신걸 환영합니다.");
-			System.out.println("[1.게시글 작성] [2.게시글 목록] [3.게시글 조회, 댓글작성] [4.게시글 수정] [5.게시글 삭제] [6.작성자 조회] [9.종료]");
+			System.out.println("삼성라이온즈 게시판에 오신걸 환영합니다.");
+			System.out.println("[1.게시글 작성] [2.게시글 목록] [3.게시글 조회] [4.게시글 수정] [5.게시글 삭제] [6.작성자 조회] [9.종료]");
 			System.out.println("선택>> ");
 			Date now = new Date();
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -156,7 +132,11 @@ public class SamsungLionsApp {
 					System.out.println(s.toString());
 				}
 
-			} else if (menu == 3) { // 한건 조회.
+				
+				
+			}else if (menu == 3) { // 한건 조회.
+					
+					
 				System.out.println("조회할 게시판 번호를 입력하세요: ");
 				int bNo = scn.nextInt();
 				SamsungLions samsung = service.getSamsung(bNo);
@@ -164,26 +144,11 @@ public class SamsungLionsApp {
 					System.out.println("조회된 결과가 없습니다.");
 				} else {
 					System.out.println(samsung.toString());
+					
 				
-				  System.out.println("1: 댓글작성 2: 나가기");
-				  int dNo = scn.nextInt();
-				  System.out.println("댓글 내용을 입력하세요");
-				  String Replytext = scn.next();
-				  System.out.println("댓글 작성자를 입력하세요.");
-				  String Writer = scn.next();
-				  ReplyServiceOracle kim = new ReplyServiceOracle();
-				  
-				  int rno = service.writeNum();
-				  
-				  rno += 1;
-				  System.out.println(rno);
-				  Reply re = new Reply(rno, Replytext, Writer);
-				  kim.create(re);
-				  System.out.println(re.toString());
-				  
-				  
-				}
-
+				   
+			   }
+			
 			} else if (menu == 4) {
 				System.out.println("수정할 게시판 번호를 입력하세요: ");
 				int bNo = scn.nextInt();
@@ -208,7 +173,7 @@ public class SamsungLionsApp {
 			} else if (menu == 6) { // 이름으로 여러건 조회.
 				System.out.println("조회할 게시글 작성자를 입력하세요: ");
 				String searchName = scn.next();
-				
+
 				List<SamsungLions> list = service.searchSamsung(searchName);
 				for (SamsungLions s : list) {
 					System.out.println(s.toString());
@@ -216,7 +181,7 @@ public class SamsungLionsApp {
 
 			} else if (menu == 9) {
 				System.out.println("SamsungLions APP를 종료합니다, 감사합니다.");
-				
+				service.saveToFile();
 				break;
 			}
 
@@ -226,4 +191,3 @@ public class SamsungLionsApp {
 	}
 
 }
-

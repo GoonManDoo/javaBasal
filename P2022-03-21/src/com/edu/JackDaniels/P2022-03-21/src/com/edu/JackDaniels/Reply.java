@@ -3,25 +3,21 @@ package com.edu.JackDaniels;
 public class Reply {
 
 	private int rno; //댓글번호
+	private int bno; //게시물 번호
 	private String replytext; //댓글 내용
 	private String writer;//댓글 작성자 이름
-	
-	public Reply() {
-		
-	}
-	public Reply(int rno,String replytext, String writer) {
-		super();
-		this.rno = rno;
-		this.replytext = replytext;
-		this.writer = writer;
-	}
 	public int getRno() {
 		return rno;
 	}
 	public void setRno(int rno) {
 		this.rno = rno;
 	}
-	
+	public int getBno() {
+		return bno;
+	}
+	public void setBno(int bno) {
+		this.bno = bno;
+	}
 	public String getReplytext() {
 		return replytext;
 	}
@@ -36,7 +32,7 @@ public class Reply {
 	}
 	@Override
 	public String toString() {
-		return "댓글목록 [번호=" + rno +  "], [댓글 내용=" + replytext + "], [댓글 작성자=" + writer + "]";
+		return "SamsungLionsDTO [rno=" + rno + ", bno=" + bno + ", replytext=" + replytext + ", writer=" + writer + "]";
 	}
      
 
