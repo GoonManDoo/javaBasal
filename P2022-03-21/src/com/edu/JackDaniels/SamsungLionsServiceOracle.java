@@ -48,10 +48,7 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 				bod.setWriter(rs.getString("b_writer"));
 				bod.setDate(rs.getString("b_date"));
 
-//				Reply dto = new Reply();
-//				dto.setRno(rs.getInt("rno"));
-//				dto.setReplytext(rs.getString("replytext"));
-//				dto.setWriter(rs.getString("replyer"));
+
 
 			}
 		} catch (SQLException e) {
@@ -105,7 +102,7 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 			psmt.setInt(5, samsung.getBno());
 
 			int r = psmt.executeUpdate();
-			System.out.println(r + "건 수정됨. ");
+			System.out.println(r + " 건 수정됨.");
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -123,7 +120,7 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 			// 파라메터(?) 값을 지정.
 			psmt.setInt(1, sno);
 			int r = psmt.executeUpdate(); // 실행.
-			System.out.println(r + "건 삭제됨. ");
+			System.out.println(r + " 건 삭제됨.");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
