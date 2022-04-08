@@ -15,8 +15,34 @@ public class SamsungLions {
 	private String Writer;
 	private String Date;
 	private int writeNum;
+	private String Dname;
+	private String Dd;
 	
 	
+
+	public String getDname() {
+		return Dname;
+	}
+
+
+
+	public void setDname(String dname) {
+		Dname = dname;
+	}
+
+
+
+	public String getDd() {
+		return Dd;
+	}
+
+
+
+	public void setDd(String dd) {
+		Dd = dd;
+	}
+
+
 
 	public SamsungLions() {
 		
@@ -84,13 +110,23 @@ public class SamsungLions {
 		Writer = writer;
 		Date = date;
 		
+		
+		
 	}
+
+	public SamsungLions(String dname, String dd) {
+		super();
+		Dname = dname;
+		Dd = dd;
+	}
+
+
 
 	@Override
 	public String toString() {
 
 		return "SamsungLions App [게시글 번호=" + Bno + "], [제목=" + Btitle + "], [내용=" + Content + "], [작성자=" + Writer
-				+ "], [작성시간=" + Date + "]";
+				+ "], [작성시간= " + Date + "댓글 내용= " + this.Dd + "작성자= " + this.Dname + "]";
 
 
 		

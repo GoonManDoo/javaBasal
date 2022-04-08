@@ -6,6 +6,7 @@ public class Reply {
 	private String replytext; //댓글 내용
 	private String writer;//댓글 작성자 이름
 	
+	
 	public Reply() {
 		
 	}

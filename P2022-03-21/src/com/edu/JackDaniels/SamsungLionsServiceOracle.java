@@ -47,6 +47,7 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 				bod.setContent(rs.getString("b_content"));
 				bod.setWriter(rs.getString("b_writer"));
 				bod.setDate(rs.getString("b_date"));
+				
 
 
 
@@ -77,6 +78,8 @@ public class SamsungLionsServiceOracle extends DAO implements SamsungLionsServic
 				samsung.setContent(rs.getString("b_content"));
 				samsung.setWriter(rs.getString("b_writer"));
 				samsung.setDate(rs.getString("b_date"));
+				samsung.setDd(rs.getString("b_da"));
+				samsung.setDname(rs.getString("b_dana"));
 				list.add(samsung);
 
 			}

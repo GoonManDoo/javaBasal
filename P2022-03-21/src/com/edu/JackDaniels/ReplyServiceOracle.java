@@ -1,6 +1,7 @@
 package com.edu.JackDaniels;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReplyServiceOracle extends DAO implements ReplyService {
@@ -32,7 +33,26 @@ public class ReplyServiceOracle extends DAO implements ReplyService {
 
 	@Override
 	public List<Reply> list(int bno) {
-		// TODO Auto-generated method stub
+		conn = getConnect();
+		List<Reply> list = new ArrayList<Reply>();
+		String sql = "select * from reply\r\n"
+				+ "where rno = ?";
+		Reply rrr = null;
+		try {
+			psmt = conn.prepareStatement(sql);
+		    psmt.setInt(1, bno);
+		    rs = psmt.executeQuery();
+		while (rs.next()) {
+				rrr = new Reply();
+				rrr.setRno(rs.getInt("rno"));
+				rrr.setReplytext(rs.getString("replytext"));
+				rrr.setWriter(rs.getNString("writer"));
+			 list.add(rrr);	
+		}	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 		return null;
 	}
 
