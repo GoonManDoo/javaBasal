@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax/get.html</title>
+</head>
+<body>
+	<div id="show"></div>
+		<table border="1">
+			<thead>
+				<tr><th>학생번호</th><th>학생이름</th><th>영어</th><th>국어</th></tr>
+			</thead>
+			<tbody id="list">
+			</tbody>
+		</table>
+	<script>
+		//서버에 파일을 요청하고 읽어들이도록.
+		let xhtp = new XMLHttpRequest(); //new String();
+		xhtp.open("get", "../studentList.json"); // 요청페이지 지정.
+		xhtp.send(); //센드가 있어야 호출시작.
+		xhtp.onload = function(){
+			let data = JSON.parse(xhtp.response); 
+			// [{}, {}, {}]
+			//[{"studentNo": ?, "studentName": "?","engScore": ?,"korScore": ?}, {}]
+			console.log(data);
+			data.forEach(function(obj){
+			document.getElementById('list').appendChild(makeTr(obj))
+				
+			});
+		};
+		
+		function makeTr(student) {
+			let tr = document.createElement('tr')
+			for(let field in student){
+				let td = document.createElement('td')
+				td.innerHTML = student[field];
+				tr.appendChild(td);
+			}; return tr;
+	        }
+		
+		
+	</script>
+</body>
+</html>
