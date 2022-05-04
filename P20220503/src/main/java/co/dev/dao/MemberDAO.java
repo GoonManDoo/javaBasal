@@ -9,6 +9,69 @@ import co.dev.vo.MemberVO;
 
 public class MemberDAO extends DAO {
 	
+	//수정
+	public boolean updateMember(MemberVO vo) {
+		conn = getConnect();
+		String sql = "update member set name=?, passwd=?, email=? where id=?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getName());
+			psmt.setString(2, vo.getPasswd());
+			psmt.setString(3, vo.getEmail());
+			psmt.setString(4, vo.getId());
+			
+			int r = psmt.executeUpdate();			
+			System.out.println(r + "건 변경.");
+			if(r>0) {
+				return true;
+			}
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+		return false;
+	}
+	
+	public void deleteMember(String id) {
+		conn = getConnect();
+		String sql = "delete from member where id=?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			psmt.executeUpdate();
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+	}
+	
+	public MemberVO searchMember(String id) {
+		conn = getConnect();
+		String sql = "select * from member where id=?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+				MemberVO vo = new MemberVO();
+				vo.setId(rs.getString("id"));
+				vo.setName(rs.getString("name"));
+				vo.setEmail(rs.getString("email"));
+				vo.setPasswd(rs.getString("passwd"));
+				return vo;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+		return null;
+	}
+	
 	public List<MemberVO> listMember() {
 		conn = getConnect();
 		
