@@ -22,10 +22,20 @@
 						<th>이름</th>
 						<th>이메일</th>
 						<th>비밀번호</th>
+						<th>이미지</th>
 					</tr>
 				<tbody>
 					<c:forEach items="${all }" var="member">
-					<tr><td>${member.id }</td><td>${member.name }</td><td>${member.email }</td><td>${member.passwd }</td></tr>
+						<tr>
+							<td>${member.id }</td>
+							<td>${member.name }</td>
+							<td>${member.email }</td>
+							<td>${member.passwd }</td>
+							<td><c:if test="${!empty member.profile }">
+									<img width="70px" src="${pageContext.servletContext.contextPath }/upload/${member.profile}">
+						</c:if>
+					    </td>
+						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
