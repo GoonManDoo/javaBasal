@@ -12,7 +12,7 @@ public class BookDAO extends DAO {
 	public List<BookVO> bookList() {
 		conn();
 		
-		String sql = "select * from book_info";
+		String sql = "select * from product";
 		List<BookVO> list = new ArrayList<BookVO>();
 		try {
 			psmt = conn.prepareStatement(sql);
