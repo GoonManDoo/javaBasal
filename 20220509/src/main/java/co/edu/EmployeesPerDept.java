@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-@WebServlet("/EmployeesPerDept")
+@WebServlet("/GenderPerDept")
 public class EmployeesPerDept extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -52,7 +52,7 @@ public class EmployeesPerDept extends HttpServlet {
 			Map<String, Integer> map = new HashMap<String, Integer>();
 			while(rs.next()) {
 				// department_name, cnt
-				map.put(rs.getString("department_name"), rs.getInt("cnt"));
+				map.put(rs.getString("gender"), rs.getInt("cnt"));
 			}
 			Gson gson = new GsonBuilder().create();
 			response.getWriter().print(gson.toJson(map)); // toJson 생성.

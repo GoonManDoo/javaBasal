@@ -15,7 +15,7 @@
 
     <h3>상품삭제조회</h3>
     <form action="${pageContext.servletContext.contextPath }/searchBook.do" method="get">
-        <input type="text" name="bookCode" id=""><br>
+        <input type="text" name="num" id=""><br>
         <input type="hidden" name="job" value="remove">
         <input type="submit" value="조회">
     </form>
@@ -26,7 +26,7 @@
     <c:otherwise>
     	<h3>상품정보삭제</h3>
     	<form action="${pageContext.servletContext.contextPath }/delete.do" method="post">
-    	 코드: <input type="text" name="code" value="${member.membernumber }"><br>
+    	 상품번호: <input type="text" name="num" value="${member.membernumber }"><br>
     	 <input type="submit" value="삭제">
     	</form>
     </c:otherwise>

@@ -33,7 +33,7 @@ public class InsertControl implements Controller {
 		String category = multi.getParameter("category");
 		String comment = multi.getParameter("comment");
 		int sale = Integer.parseInt(multi.getParameter("sale"));
-		String pimg = multi.getParameter("pimg");
+		String pimg = multi.getFilesystemName("pimg");
 		String gender = multi.getParameter("gender");
 		String email = multi.getParameter("email");
 		
@@ -43,6 +43,7 @@ public class InsertControl implements Controller {
 		vo.setProDuctPrice(price);
 		vo.setCateGory(category);
 		vo.setComment(comment);
+		
 		vo.setSale(sale);
 		vo.setpImg(pimg);
 		vo.setGender(gender);

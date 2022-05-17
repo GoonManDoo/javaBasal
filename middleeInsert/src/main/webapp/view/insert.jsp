@@ -16,7 +16,7 @@
         상품가격: <input type="number" name="price"><br>
         카테고리: <input type="text" name="category"><br>
         내용: <input type="text" name="comment"><br>
-        세일: <input type="number" name="sale"><br>s
+        세일: <input type="number" name="sale"><br>
         사진: <input type="file" name="pimg"><br>
         성별: <input type="text" name="gender"><br>
         아이디: <input type="email" name="email"><br>
