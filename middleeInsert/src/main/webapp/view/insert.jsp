@@ -10,7 +10,11 @@
 <body>
 
     <h3>상품등록</h3>
+<<<<<<< HEAD
     <form action="../insert.do" method="post" enctype="multipart/form-data">
+=======
+    <form action="../fileUploadServlet" method="post" name="frm" enctype="multipart/form-data">
+>>>>>>> branch 'master' of https://github.com/GoonManDoo/GoonManDoo.git
         상품번호: <input type="number" name="num"><br>
         상품이름: <input type="text" name="name"><br>
         상품가격: <input type="number" name="price"><br>

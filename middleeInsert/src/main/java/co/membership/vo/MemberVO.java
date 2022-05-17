@@ -32,8 +32,8 @@ public class MemberVO {
 	public int getProDuctNum() {
 		return proDuctNum;
 	}
-	public void setProDuctNum(int proDuctNum) {
-		this.proDuctNum = proDuctNum;
+	public void setProDuctNum(int number) {
+		this.proDuctNum = number;
 	}
 	public String getProDuctName() {
 		return proDuctName;
