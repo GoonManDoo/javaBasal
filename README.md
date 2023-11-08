@@ -26,7 +26,7 @@
     - 람다식
     - Thread
     - 콘솔창을 이용한 게시판 프로그램 [CRUD, 댓글 등]
-4. [서블릿HelloWeb](https://github.com/GoonManDoo/javaBasal/tree/master/HelloWeb)
+4. [서블릿](https://github.com/GoonManDoo/javaBasal/tree/master/HelloWeb)
 5. [DBOracleJDBC](https://github.com/GoonManDoo/javaBasal/tree/master/OracleJDBC)
     - DAO
     - CRUD
@@ -34,16 +34,14 @@
     - DAO
     - Servlet
     - JSP
-7. [JSPJSPProject](https://github.com/GoonManDoo/javaBasal/tree/master/JSPProject)
-    - DAO
-8. [중간프로젝트 상품파트](https://github.com/GoonManDoo/javaBasal/tree/master/middleeInsert)
+7. [중간프로젝트 상품파트](https://github.com/GoonManDoo/javaBasal/tree/master/middleeInsert)
     - JSTL
     - 파일 업로드
     - 상품 CRUD
     - MVC 패턴
-9. [CRUD 테스트](https://github.com/GoonManDoo/javaBasal/tree/master/T20220510)
+8. [CRUD 테스트](https://github.com/GoonManDoo/javaBasal/tree/master/T20220510)
     - JSTL
     - 도서 CRUD
     - PL/SQL
     - MVC 패턴
-10. [간단한 학생, 교수 확인 프로그램](https://github.com/GoonManDoo/javaBasal/tree/master/P20220401)
+9. [간단한 학생, 교수 확인 프로그램](https://github.com/GoonManDoo/javaBasal/tree/master/P20220401)
